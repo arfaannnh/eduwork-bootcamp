@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Pribadi - R.A. Fairrhisa</title>
+  <style>
+    /* RESET & BASE STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* GRADIENT BLUE BACKGROUND */
+    .bg-gradient {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 20px;
+      display: grid;
+    }
+
+    /* SECTION 1: NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav .links span {
+      margin-left: 15px;
+      cursor: pointer;
+    }
+
+    /* SECTION 2: HERO / PROFILE */
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .hero-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* SECTION 3: ABOUT ME (6 KOLOM) */
+    .about-section {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolom di PC */
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: #f8fafc;
+      padding: 15px;
+      border-left: 4px solid #3b82f6;
+      border-radius: 5px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    /* SECTION 4: PORTOFOLIO */
+    .portfolio-section {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolom di PC */
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item img:hover {
+      transform: scale(1.05);
+    }
+
+    /* MEDIA QUERIES (RESPONSIVE) */
+
+    /* Tablet Layout */
+    @media (max-width: 768px) {
+      .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .about-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+      }
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile Layout */
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .about-grid, .portfolio-grid {
+        grid-template-columns: 1fr; /* 1 kolom di HP */
+      }
+      nav .links span {
+        margin: 0 5px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="bg-gradient">
+    <div class="logo"><b>R.A. Fairrhisa</b></div>
+    <div class="links">
+      <span>Header</span> | <span>Biodata</span> | <span>Portofolio</span>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div>
+      <h2 style="color: #1e3a8a; margin-bottom: 10px;">Halo!</h2>
+      <p>
+        Saya adalah pelajar yang tertarik dengan dunia teknologi dan sedang belajar membuat website menggunakan HTML dan CSS Modern.
+      </p>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://pbs.twimg.com/profile_banners/357933892/1581426523/1500x500" alt="Foto Saya">
+      <p style="margin-top: 10px; font-style: italic; color: #666;">Foto profil saya</p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2 style="color: #1e3a8a;">About Me</h2>
+    <p>Berikut adalah detail singkat mengenai diri saya.</p>
+    
+    <div class="about-grid">
+      <div class="info-card"><strong>Nama:</strong> Refdani Arfan Fairrhisa</div>
+      <div class="info-card"><strong>Pendidikan:</strong> SMK</div>
+      <div class="info-card"><strong>Pekerjaan:</strong> IT Support</div>
+      <div class="info-card"><strong>Kontak:</strong> 081292980067</div>
+      <div class="info-card"><strong>Hobi:</strong> Gaming</div>
+      <div class="info-card"><strong>Alamat:</strong> Depok</div>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <h2 style="color: #1e3a8a; margin-bottom: 20px;">Portofolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="IMG_20241213_105452.jpeg" alt="Proyek 1">
+        <p style="margin-top:10px;">Gambar 1</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://pbs.twimg.com/profile_images/1255515843045330944/JXjvGfo7_400x400.jpg" alt="Proyek 2">
+        <p style="margin-top:10px;">Gambar 2</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="WIN_20251012_22_56_07_Pro.jpg" alt="Proyek 3">
+        <p style="margin-top:10px;">Gambar 3</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
